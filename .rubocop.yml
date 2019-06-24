@@ -1,0 +1,10 @@
+inherit_from: .rubocop_todo.yml
+
+# Configuration parameters: CountComments.
+Metrics/MethodLength:
+  Max: 15
+
+# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
+# URISchemes: http, https
+Metrics/LineLength:
+  Max: 140
