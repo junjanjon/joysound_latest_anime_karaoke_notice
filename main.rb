@@ -169,7 +169,7 @@ def work(twitter_client, word2, message_head)
 
       message = message[0, 135] + '...' if 140 < message.length
       puts message
-      client.update(message)
+      twitter_client.update(message)
       history.register_history(info)
       sleep(5)
     end
