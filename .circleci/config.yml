@@ -19,8 +19,7 @@ jobs:
       - run: cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
       - run: bash -xe main.sh
       - save_cache:
-          key:
-            - gem1-{{ checksum "Gemfile.lock" }}
+          key: gem1-{{ checksum "Gemfile.lock" }}
           paths:
             - "vendor"
             - ".bundle"
