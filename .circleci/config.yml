@@ -17,6 +17,7 @@ jobs:
       - checkout
       - run: bundle install --path vendor/bundle
       - run: cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+      - run: openssl aes-256-cbc -k "$DECRYPT_KEY" -in twitter_config.yml.enc -out twitter_config.yml -d
       - run: bash -xe main.sh
       - save_cache:
           key: gem1-{{ checksum "Gemfile.lock" }}
