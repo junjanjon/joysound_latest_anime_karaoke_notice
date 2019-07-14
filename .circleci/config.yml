@@ -40,6 +40,6 @@ workflows:
     triggers:
       - schedule:
           <<: *filtersBranchesOnlyMaster
-          cron: "15 11 * * *"
+          cron: "15 0 * * *"
     jobs:
       - build
