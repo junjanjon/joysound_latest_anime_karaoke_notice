@@ -143,12 +143,11 @@ end
 
 def get_twitter_client
   # return TwitterStub.new
-  config_yaml = YAML.load_file('twitter_config.yml')
   client = Twitter::REST::Client.new do |config|
-    config.consumer_key        = config_yaml['consumer_key']
-    config.consumer_secret     = config_yaml['consumer_secret']
-    config.access_token        = config_yaml['access_token']
-    config.access_token_secret = config_yaml['access_token_secret']
+    config.consumer_key        = ENV.fetch('consumer_key')
+    config.consumer_secret     = ENV.fetch('consumer_secret')
+    config.access_token        = ENV.fetch('access_token')
+    config.access_token_secret = ENV.fetch('access_token_secret')
   end
 end
 

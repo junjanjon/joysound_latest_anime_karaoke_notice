@@ -1,5 +1,10 @@
 #!/usr/bin/env bash -xe
 
+export consumer_key=CTbwz7HFxSMUuXekV6oBMQYaL
+export consumer_secret=aTFahrygHxHOLAvUtcnDPza8uSZUBrMGg2Gh5FDTJw7nHgUTow
+export access_token=954356069337202688-NkG4haeRjBLfJOWWi9aXzeBR5hMGBna
+export access_token_secret=Dvmchahf6nBzv8pkNQnXXWQc40E31wgw0Yb7db7tGbzIc
+
 set -e
 bundle exec ruby main.rb
 
